@@ -4,17 +4,10 @@ namespace FigureLibruary.Figure
 {
     public class Triangle : IFigure
     {
-        // Стороны треугольника
-        double[] Sides;
+        private double[] sides;
 
-        // Проверка, является ли треугольник прямоугольным
-        // Не использовал метод Math.Pow для достижения максимальной скорости вычисления
-        public bool IsRight => Sides[0] * Sides[0] + Sides[1] * Sides[1] == Sides[2] * Sides[2];
+        public bool IsRight => Math.Pow(sides[0], 2) + Math.Pow(sides[1], 2) == Math.Pow(sides[2], 2);
 
-        /// <summary>Конструктор треугольника</summary>
-        /// <param name="a">Сторона треугольника А</param>
-        /// <param name="b">Сторона треугольника B</param>
-        /// <param name="c">Сторона треугольника C</param>
         public Triangle(double a, double b, double c)
         {
             if (a <= 0 || b <= 0 || c <= 0)
@@ -23,15 +16,13 @@ namespace FigureLibruary.Figure
             if (a + b <= c || a + c <= b || b + c <= a)
                 throw new ArgumentException("Треугольник не существует");
 
-            Sides = new[] { a, b, c };
+            sides = new[] { a, b, c };
         }
 
-        // Метод подсчёта площади треугольника
         public double GetArea()
         {
-            var p = Sides.Sum() / 2;
-            return Math.Sqrt(p * (p - Sides[0]) * (p - Sides[1]) * (p - Sides[2]));
+            double p = sides.Sum() / 2;
+            return Math.Sqrt(p * (p - sides[0]) * (p - sides[1]) * (p - sides[2]));
         }
-
     }
 }

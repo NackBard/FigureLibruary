@@ -4,20 +4,16 @@ namespace FigureLibruary.Figure
 {
     public class Circle : IFigure
     {
-        // Радиус окружности
-        private double r;
+        private double radius;
 
-        /// <summary>Конструктор окружности</summary>
-        /// <param name="r">Радиус окружности</param> 
-        public Circle(double r)
+        public Circle(double radius)
         {
-            if (r <= 0)
+            if (radius <= 0)
                 throw new ArgumentException("Радиус дольже быть положительным числом");
 
-            this.r = r;
+            this.radius = radius;
         }
 
-        // Метод подсчёта площади окружности
-        public double GetArea() => Math.PI * r * r;
+        public double GetArea() => Math.PI * radius * radius;
     }
 }
