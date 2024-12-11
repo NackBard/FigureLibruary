@@ -25,10 +25,10 @@ namespace TestFigureLibruary
         }
 
         [Fact]
-        public void IsRight_ReturnCorrectValue()
+        public void IsRectangle_ReturnCorrectValue()
         {
-            Assert.False(new Triangle(2, 2, 3).IsRight);
-            Assert.True(new Triangle(3, 4, 5).IsRight);
+            Assert.False(new Triangle(2, 2, 3).IsRectangle());
+            Assert.True(new Triangle(3, 4, 5).IsRectangle());
         }
     }
 }
