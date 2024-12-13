@@ -14,6 +14,6 @@ namespace FigureLibruary.Figure
             this.radius = radius;
         }
 
-        public double GetArea() => Math.PI * radius * radius;
+        public virtual double GetArea() => Math.PI * radius * radius;
     }
 }

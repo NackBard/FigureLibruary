@@ -2,7 +2,7 @@
 
 namespace FigureLibruary.Figure
 {
-    public class Triangle : IFigure
+    public sealed class Triangle : ITriangle
     {
         private double[] sides;
 
@@ -32,6 +32,5 @@ namespace FigureLibruary.Figure
             return Math.Sqrt(semiperimeter * (semiperimeter - sides[0])
                 * (semiperimeter - sides[1]) * (semiperimeter - sides[2]));
         }
-
     }
 }
