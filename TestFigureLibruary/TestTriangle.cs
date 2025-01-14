@@ -6,7 +6,7 @@ namespace TestFigureLibruary
     public class TestTriangle
     {
         [Fact]
-        public void GetArea_ReturnCorrectValue()
+        public void GetArea8_ReturnCorrectValue()
         {
             Assert.Equal(1.984313483298443, new Triangle(2, 2, 3).GetArea());
             Assert.Equal(6, new Triangle(3, 4, 5).GetArea());
@@ -28,7 +28,9 @@ namespace TestFigureLibruary
         public void IsRectangle_ReturnCorrectValue()
         {
             Assert.False(new Triangle(2, 2, 3).IsRectangle());
-            Assert.True(new Triangle(3, 4, 5).IsRectangle());
+            Assert.False(new Triangle(7.101, 0.904, 7.6).IsRectangle());
+            Assert.True(new Triangle(4, 5, 3).IsRectangle());
+            Assert.True(new Triangle(223.44645, 158.0005, 158.0005).IsRectangle());
         }
     }
 }
