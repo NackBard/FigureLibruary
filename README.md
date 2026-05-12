@@ -119,10 +119,6 @@ ORDER BY Product.Name
 | Testing | xUnit 2.9, coverlet |
 | Database | MS SQL Server |
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ---
 
 > Built with ❤️ using C# .NET 6 and xUnit
